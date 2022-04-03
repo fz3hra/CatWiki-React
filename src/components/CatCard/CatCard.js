@@ -4,8 +4,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai'
 
 
 const CatCard = ({posts, setPosts, loading, setLoading}) => {
-  const baseURL = "https://api.thecatapi.com/v1/breeds?api_key=cef8de37-19fb-480a-8a09-5d5f6180393a&limit=4"
-
+  const baseURL = process.env.REACT_APP_BASE_URL_LIMIT
   useEffect(() => {
     axios.get(baseURL).then((res) => {
       setPosts(res.data)

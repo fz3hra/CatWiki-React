@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 export default function Search({searchTerm, handleSearch}) {
-  const baseURL = "https://api.thecatapi.com/v1/breeds?api_key=cef8de37-19fb-480a-8a09-5d5f6180393a"
+  const baseURL = process.env.REACT_APP_BASE_URL
   const [searchBreed, setSearchBreed] = useState([])
   useEffect(() => {
     axios.get(baseURL).then((res) => {
