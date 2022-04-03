@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Mystery+Quest&display=swap');
+.banner {
+  background-image: url('https://images.unsplash.com/photo-1529257414772-1960b7bea4eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80');
+  object-fit: contain;
+  min-width: 100%;
+  position: absolute;
+}
+
+.catWiki {
+  font-family: mystery Quest;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 87px;
+}
+
+.catWikiDescription{
+  font-family: montserrat;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+input::placeholder{
+  font-family: montserrat;
+}
+
+.data::-webkit-scrollbar{
+  display: none;
+}
+
+.cardTitle{
+  font-family: montserrat;
+  /* font-style: normal; */
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.cardSubTitle{
+  font-family: 'Montserrat';
+  /* font-style: normal; */
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+}
+
+.seeMore{
+  font-family: 'Montserrat';
+  /* font-style: normal; */
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
