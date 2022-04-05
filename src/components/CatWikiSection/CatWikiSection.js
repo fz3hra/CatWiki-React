@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 import Banner from '../Banner/Banner'
 import CatCard from '../CatCard/CatCard'
 import { FaCat } from 'react-icons/fa'
+import Roots from '../../pages/Roots'
 
 const CatWikiSection = () => {
-      // const baseURL = "https://api.thecatapi.com/v1/images/search?api_key=cef8de37-19fb-480a-8a09-5d5f6180393a"
-// console.log("rev", baseURL)
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(false);
   return (
