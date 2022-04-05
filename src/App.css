@@ -51,3 +51,18 @@ input::placeholder{
   font-size: 18px;
   line-height: 22px;
 }
+
+.line{
+  position: absolute;
+  width: 10rem;
+  height: 3px;
+  background-color: black;
+}
+
+body{
+  min-height: 100vh;
+}
+
+html{
+  height: 100%;
+}

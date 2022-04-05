@@ -4,6 +4,7 @@ import axios from 'axios';
 
 export default function Search({searchTerm, handleSearch}) {
   const baseURL = process.env.REACT_APP_BASE_URL
+  // console.log("url", baseURL)
   const [searchBreed, setSearchBreed] = useState([])
   useEffect(() => {
     axios.get(baseURL).then((res) => {
