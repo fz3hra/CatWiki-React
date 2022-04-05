@@ -1,10 +1,10 @@
 import './App.css';
-import CatWikiSection from './components/CatWikiSection/CatWikiSection';
+import Roots from './pages/Roots';
 
 function App() {
   return (
     <>
-      <CatWikiSection />
+      <Roots />
     </>
   );
 }
