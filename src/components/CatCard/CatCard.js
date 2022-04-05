@@ -24,8 +24,10 @@ const CatCard = ({posts, setPosts, loading, setLoading}) => {
   return (
     <div className='bg-stone-300 h-128 rounded-b-3xl'>
         {/* title */}
-        <p className='cardTitle p-4'>Most Searched Breeds</p>
-        <h1 className='cardSubTitle p-4'>66+ Breeds For You to discover</h1>
+        <div className='ml-10'>
+          <p className='cardTitle p-4'>Most Searched Breeds</p>
+          <h1 className='cardSubTitle p-4'>66+ Breeds For You to discover</h1>
+        </div>
         {/* 50px right and bottom 10px */}
         <div className='flex flex-row justify-end items-center mr-12 mb-2.5'>
           {/* TODO: most searched cat breed: top 10 */}
