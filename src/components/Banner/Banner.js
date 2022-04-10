@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Search from '../Search/Search'
 import { FaCat } from 'react-icons/fa'
+import { AppContext } from '../../hooks/IdContext'
 
 const Banner = ({ posts, setPosts }) => {
+  const { searchTerm, setSearchTerm } = useContext(AppContext)
   console.log("posts", posts)
-  const [searchTerm, setSearchTerm] = useState('')
   const handleSearch = (e) => {
     setSearchTerm(e.target.value)
   }

@@ -13,6 +13,9 @@ module.exports = {
       height: {
         '128': '30rem'
       },
+      width: {
+        '601': '601px'
+      },
       fontFamily: {
         'mystery-Quest': ['mystery Quest'],
         'montserrat': ['montserrat']
