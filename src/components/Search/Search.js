@@ -1,18 +1,26 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
-
+import { Link, useMatch, useParams } from 'react-router-dom';
+import { AppContext } from '../../hooks/IdContext';
 
 export default function Search({searchTerm, handleSearch}) {
+  const { ids, setIds, single, setSingle } = useContext(AppContext)
   const baseURL = process.env.REACT_APP_BASE_URL
-  // console.log("url", baseURL)
+  const idUrl = "https://api.thecatapi.com/v1/images/search?breed_ids=${ids}&api_key=${process.env.REACT_APP_API_KEY}"
   const [searchBreed, setSearchBreed] = useState([])
   useEffect(() => {
     axios.get(baseURL).then((res) => {
       setSearchBreed(res.data)
-      console.info("review", res.data)
     })
     .catch((err) => {
       console.log(err);
+    })
+  }, [])
+  
+  useEffect(() => {
+    axios.get(idUrl).then((res) => {
+      setSingle(res.data)
+      setIds(res.data)
     })
   }, [])
   return (
@@ -32,7 +40,19 @@ export default function Search({searchTerm, handleSearch}) {
               return post
             }
           }).map((post) => (
-              <p className=''>{post.name}</p>
+            <Link to={`/${ids}`}>
+              <button 
+                className='search-breed'
+                onClick={() => { 
+                  setIds(post.id)
+                  setSingle(post)
+                  console.log("rv", ids)
+                  console.log("single", single)
+                }}
+              >
+                {post.name}
+              </button>
+            </Link>
           ))}
           </div>
       )}
