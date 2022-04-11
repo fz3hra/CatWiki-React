@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import RatingDetail from '../RatingDetail/RatingDetail'
+import axios from 'axios'
 
 const SingleBreed = () => {
     const [product, setProduct] = useState([])
     const [loading, setLoading] = useState(false);
+    const [others, setOthers] = useState([])
     const id = useParams().id
     console.log("id", id)
     useEffect(() => {
-        getProduct()
+        getProduct();
+
+        axios.get('https://api.thecatapi.com/v1/images/search?limit=8&breeds_ids=${id}&api_key=${process.env.REACT_APP_API_KEY}')
+            .then((res) => {
+                setOthers(res.data)
+            })
     }, [])
 
     const getProduct = () => {
@@ -22,7 +29,6 @@ const SingleBreed = () => {
         })
             .then((res) => {
                 const newProd = res.find((item) => item.id === id)
-                // console.log("newprod", newProd)
                 setProduct(newProd)
             })
             .catch((err) => {
@@ -36,17 +42,11 @@ const SingleBreed = () => {
     if(loading) {
         return <p>Data is loading...</p>
     }
-    console.log("product", product)
+    console.log("other", others)
   return (
     <div className='mb-20 ml-20 mr-20 mt-5'>
         <div className='flex justify-around'>
-            {/* width: 83.64px */}
-            {/* height: 305.12px */}
-            {/* border-radius: 14px */}
             <div className='image '>
-                {/* width: 371.04px;
-                    height: 371.04px; */}
-                    {/* bg-light-brown w-20 h-74 */}
                     <img 
                         className='h-96 w-96 rounded-3xl object-cover bg-light-brown'
                         src={product.image?.url}
@@ -73,9 +73,18 @@ const SingleBreed = () => {
                 </div>
             </div>
         </div>
-
-        {/* second section */}
-        {/* other images */}
+        <div className='mt-20 mb-20'>
+            <h1>Other Photos</h1>
+            <div className='grid grid-cols-4 gap-8 pt-10'>
+                {
+                    others.map((other) => (
+                        <div>
+                            <img className="h-71 w-71 bg-cover rounded-3xl" src={other.url} alt="" />
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
     </div>
   )
 }
