@@ -10,7 +10,7 @@ const Banner = ({ posts, setPosts }) => {
     setSearchTerm(e.target.value)
   }
   return (
-    <div className="bg-gradient-to-r from-cyan-500 to-blue-500 h-80 rounded-t-3xl">
+    <div id="hero" className="hero bg-cover bg-gradient-to-r from-cyan-500 to-blue-500 h-200 rounded-t-3xl">
         <div className='h-80'>
           <div className='flex-start flex-col items-center p-20'>
               <div className='flex'>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import RatingDetail from '../RatingDetail/RatingDetail'
 
 const SingleBreed = () => {
     const [product, setProduct] = useState([])
@@ -14,14 +15,14 @@ const SingleBreed = () => {
         fetch(`https://api.thecatapi.com/v1/breeds?images/search?breed_ids=${id}&api_key=${process.env.REACT_APP_API_KEY}`)
         .then((res) => {
             if (res.ok) {
-              return res.json();
+                return res.json();
             } else {
-              console.log("res error");
+                console.log("res error");
             }
-          })
+        })
             .then((res) => {
                 const newProd = res.find((item) => item.id === id)
-                console.log("newprod", newProd)
+                // console.log("newprod", newProd)
                 setProduct(newProd)
             })
             .catch((err) => {
@@ -39,14 +40,18 @@ const SingleBreed = () => {
   return (
     <div className='mb-20 ml-20 mr-20 mt-5'>
         <div className='flex justify-around'>
-            <div className='image'>
+            {/* width: 83.64px */}
+            {/* height: 305.12px */}
+            {/* border-radius: 14px */}
+            <div className='image '>
                 {/* width: 371.04px;
                     height: 371.04px; */}
-                <img 
-                    className='h-96 w-96 rounded-3xl object-cover'
-                    src={product.image?.url}
-                    alt="catimage" 
-                />
+                    {/* bg-light-brown w-20 h-74 */}
+                    <img 
+                        className='h-96 w-96 rounded-3xl object-cover bg-light-brown'
+                        src={product.image?.url}
+                        alt="catimage" 
+                    />
             </div>
             <div className='ml-20 w-601'>
                 <h1 className='p-6'>{product.name}</h1>
@@ -54,17 +59,17 @@ const SingleBreed = () => {
                     {product.description}
                 </p>
                 <div className='flex flex-col'>
-                    <strong className="temperament p-6">temperament: {product.temperament}</strong>
-                    <strong className="origin p-6">origin: {product.origin}</strong>
-                    <strong className="lifespan p-6">lifespan: {product.life_span}</strong>
-                    <strong className="adaptability p-6">adaptability: {product.adaptability}</strong>
-                    <strong className="affection p-6">affection: {product.affection}</strong>
-                    <strong className="friendly p-6">child friendly: {product.child_friendly}</strong>
-                    <strong className="grooming p-6">grooming: {product.grooming}</strong>
-                    <strong className="intelligence p-6">intelligence: {product.intelligence}</strong>
-                    <strong className="health p-6">health issues: {product.health_issues}</strong>
-                    <strong className="social p-6">social needs: {product.social_needs}</strong>
-                    <strong className="stranger p-6">stranger friendly: {product.stranger_friendly}</strong>
+                    <RatingDetail isText className="temperament p-6" title="temperament" value={product.temperament}/>
+                    <RatingDetail isText className="origin p-6" title="origin" value={product.origin}/>
+                    <RatingDetail isText className="lifespan p-6" title="lifespan" value={product.life_span}/>
+                    <RatingDetail className="adaptability p-6" title="Adaptability" value={product.adaptability}/>
+                    <RatingDetail className="affection p-6" title="Affection" value={product.affection}/>
+                    <RatingDetail className="friendly p-6" title="child_friendly" value={product.child_friendly}/>
+                    <RatingDetail className="grooming p-6" title="grooming" value={product.grooming}/>
+                    <RatingDetail className="intelligence p-6" title="intelligence" value={product.intelligence}/>
+                    <RatingDetail className="health p-6" title="health" value={product.health_issues}/>
+                    <RatingDetail className="social p-6" title="social" value={product.social_needs}/>
+                    <RatingDetail className="stranger p-6" title="stranger" value={product.stranger_friendly}/>
                 </div>
             </div>
         </div>
@@ -72,9 +77,6 @@ const SingleBreed = () => {
         {/* second section */}
         {/* other images */}
     </div>
-    // <div>
-    //     <p>{product.name}</p>
-    // </div>
   )
 }
 

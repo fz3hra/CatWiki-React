@@ -22,7 +22,7 @@ const CatCard = ({posts, setPosts, loading, setLoading}) => {
     return <p>Data is loading...</p>;
   }
   return (
-    <div className='bg-stone-300 h-128 rounded-b-3xl'>
+    <div className='bg-stone-300 h-300 rounded-b-3xl'>
         {/* title */}
         <div className='ml-10'>
           <p className='cardTitle p-4'>Most Searched Breeds</p>
@@ -41,12 +41,12 @@ const CatCard = ({posts, setPosts, loading, setLoading}) => {
         {/* Subtitle */}
         {/* See more */}
       <div
-        className='grid grid-cols-4 gap-4 h-40 p-2 ml-10 mr-10'
+        className='grid grid-cols-4 gap-4 h-40 p-2 ml-20 mr-10'
       >
         {posts.map((post) => (
           <div>
-            <img className='object-cover h-48 w-96 rounded-lg' key={post.id} src={post.image.url}/>
-            <h1>{post.name}</h1>
+            <img className='object-cover h-48 w-56 rounded-lg' key={post.id} src={post.image.url}/>
+            <h1 className='pt-5'>{post.name}</h1>
           </div>
         ))}
       </div>

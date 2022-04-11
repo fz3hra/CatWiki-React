@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
 
 export const AppContext = React.createContext();
 
@@ -7,7 +6,8 @@ export const AppProvider = ({ children }) => {
     const [searchTerm, setSearchTerm] = useState('')
     const [ids, setIds] = useState()
     const [single, setSingle] = useState()
-  return (
+
+    return (
     <AppContext.Provider
         value={{
             ids, 
@@ -15,7 +15,7 @@ export const AppProvider = ({ children }) => {
             single, 
             setSingle,
             searchTerm,
-            setSearchTerm
+            setSearchTerm,
         }}
     >
         { children}

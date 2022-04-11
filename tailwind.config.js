@@ -11,14 +11,23 @@ module.exports = {
         'extra': '1248px'
       },
       height: {
-        '128': '30rem'
+        '128': '30rem',
+        '200': '538.19px',
+        '300': '530.4px',
+        '74': '305.12px'
       },
       width: {
+        '15': '60px',
+        '70': '250px',
         '601': '601px'
       },
       fontFamily: {
         'mystery-Quest': ['mystery Quest'],
         'montserrat': ['montserrat']
+      },
+      colors: {
+        'dark-brown': '#333333',
+        'light-brown': '#DEC68B'
       }
     },
   },
