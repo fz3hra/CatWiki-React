@@ -27,12 +27,12 @@ export default function Search({searchTerm, handleSearch}) {
     <div className="">
       {/* TODO: redirect to cat wiki of a cat's breed when searched */}
       <input 
-          className='border shadow-sm border-slate-300 rounded-3xl text-center outline-0 w-72 h-16'
+          className='border shadow-sm border-slate-300 rounded-3xl text-center outline-0 w-72 h-16 text-black'
           placeholder='flex for cat breed'
           onChange={handleSearch}
       />
           {searchTerm.length !=0 && (
-          <div className='mt-1.5 data w-80	h-52 bg-white overflow-hidden	overflow-y-auto absolute rounded-3xl p-5'	>
+          <div className='flex flex-col mt-1.5 data w-72 h-52 bg-white overflow-hidden	overflow-y-auto absolute rounded-3xl p-5 text-black'	>
           {searchBreed.filter((post) => {
             if (searchTerm == "") {
               return post
@@ -50,7 +50,9 @@ export default function Search({searchTerm, handleSearch}) {
                   console.log("single", single)
                 }}
               >
-                {post.name}
+                <ul className='flex w-70 h-14 hover:bg-gray-100	'>
+                  <li>{post.name}</li>
+                </ul>
               </button>
             </Link>
           ))}

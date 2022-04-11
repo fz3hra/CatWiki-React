@@ -11,7 +11,7 @@ const Footer = () => {
                 </div>
                 <div className='m-10'>
                     <p className='text-white'>
-                        &copy; created by fz3hra - devChallenge.io 2022
+                        &copy; created by <a target="_blank" href="https://www.linkedin.com/in/faatimah-iz-zaahra-m-0670881a1/">fz3hra</a> - devChallenge.io 2022
                     </p>
                 </div>
             </div>

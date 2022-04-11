@@ -10,7 +10,7 @@ const CatWikiSection = () => {
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(false);
   return (
-    <div className='mb-20 ml-20 mr-20 mt-5'>
+    <div id="home" className='mb-20 ml-20 mr-20 mt-5'>
         <Header />
         <Banner posts={posts} setPosts={setPosts}/>
         <CatCard posts={posts} setPosts={setPosts} loading={loading} setLoading={setLoading}/>
