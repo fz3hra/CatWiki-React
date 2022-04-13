@@ -3,31 +3,31 @@ import { HashLink } from 'react-router-hash-link'
 
 const Why = () => {
   return (
-    <div className='m-20 flex'>
+    <div className='desktop:m-20 desktop:flex'>
         <div className='line'></div>
-        <div className='mt-10 mr-8'>
-            <h1 className='font-montserrat font-bold text-5xl mb-8'>Why should you have a cat?</h1>
-            <p className='font-montserrat font-medium text-lg mb-8'>Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety levels</p>
-            <HashLink to="#home" className="seeMore font-bold">Read More</HashLink>
+        <div className='desktop:mt-10 desktop:mr-8'>
+            <h1 className='desktop:font-montserrat desktop:font-bold desktop:text-5xl desktop:mb-8'>Why should you have a cat?</h1>
+            <p className='desktop:font-montserrat desktop:font-medium desktop:text-lg desktop:mb-8'>Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety levels</p>
+            <HashLink to="#home" className="seeMore desktop:font-bold">Read More</HashLink>
         </div>
-        <div className='grid grid-cols-3 gap-5 mx-auto space-y-3 pb-28 w-[1200px]'>
-            <div className='break-inside-avoid'>
+        <div className='desktop:grid desktop:grid-cols-3 desktop:gap-5 desktop:mx-auto desktop:space-y-3 desktop:pb-28 desktop:w-[1200px]'>
+            <div className='desktop:break-inside-avoid'>
                 <img 
-                    className='rounded-lg'
+                    className='desktop:rounded-lg'
                     src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" 
                     alt="" 
                 />
             </div>
-            <div className='break-inside-avoid'>
+            <div className='desktop:break-inside-avoid'>
                 <img 
-                    className='rounded-lg h-60 w-32 object-cover'
+                    className='desktop:rounded-lg desktop:h-60 desktop:w-32 desktop:object-cover'
                     src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" 
                     alt="" 
                 />
             </div>
-            <div className='break-inside-avoid'>
+            <div className='desktop:break-inside-avoid'>
                 <img 
-                    className='rounded-lg h-52 w-32 object-cover'
+                    className='desktop:rounded-lg desktop:h-52 desktop:w-32 desktop:object-cover'
                     src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" 
                     alt="" 
                 />

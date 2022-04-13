@@ -10,15 +10,15 @@ const Banner = ({ posts, setPosts }) => {
     setSearchTerm(e.target.value)
   }
   return (
-    <div id="hero" className="hero bg-cover bg-gradient-to-r from-cyan-500 to-blue-500 h-200 rounded-t-3xl">
-        <div className='h-80'>
-          <div className='flex-start flex-col items-center p-20'>
-              <div className='flex'>
+    <div id="hero" className="hero desktop:bg-cover desktop:bg-gradient-to-r desktop:from-cyan-500 desktop:to-blue-500 desktop:h-200 desktop:rounded-t-3xl">
+        <div className='desktop:h-80'>
+          <div className='desktop:flex-start desktop:flex-col desktop:items-center desktop:p-20'>
+              <div className='desktop:flex'>
                 <h1 className='catWiki'>CatWiki</h1>
-                <FaCat className='text-6xl translate-x-6	'/>
+                <FaCat className='desktop:text-6xl desktop:translate-x-6	'/>
               </div>
               <h6 className='catWikiDescription'>Get to know more about your cat breed</h6>
-              <div className='pt-10'>
+              <div className='desktop:pt-10'>
                   {/* search */}
                     <Search posts={posts} searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSearch={handleSearch}/>
               </div>

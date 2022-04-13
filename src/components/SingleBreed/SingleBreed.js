@@ -44,42 +44,42 @@ const SingleBreed = () => {
     }
     console.log("other", others)
   return (
-    <div className='mb-20 ml-20 mr-20 mt-5'>
-        <div className='flex justify-around'>
+    <div className='desktop:mb-20 desktop:ml-20 desktop:mr-20 desktop:mt-5'>
+        <div className='desktop:flex desktop:justify-around'>
             <div className='image '>
                     <img 
-                        className='h-96 w-96 rounded-3xl object-cover bg-light-brown'
+                        className='desktop:h-96 desktop:w-96 desktop:rounded-3xl desktop:object-cover desktop:bg-light-brown'
                         src={product.image?.url}
                         alt="catimage" 
                     />
             </div>
-            <div className='ml-20 w-601'>
-                <h1 className='p-6'>{product.name}</h1>
-                <p className='p-6'>
+            <div className='desktop:ml-20 desktop:w-601'>
+                <h1 className='desktop:p-6'>{product.name}</h1>
+                <p className='desktop:p-6'>
                     {product.description}
                 </p>
-                <div className='flex flex-col'>
-                    <RatingDetail isText className="temperament p-6" title="temperament" value={product.temperament}/>
-                    <RatingDetail isText className="origin p-6" title="origin" value={product.origin}/>
-                    <RatingDetail isText className="lifespan p-6" title="lifespan" value={product.life_span}/>
-                    <RatingDetail className="adaptability p-6" title="Adaptability" value={product.adaptability}/>
-                    <RatingDetail className="affection p-6" title="Affection" value={product.affection}/>
-                    <RatingDetail className="friendly p-6" title="child_friendly" value={product.child_friendly}/>
-                    <RatingDetail className="grooming p-6" title="grooming" value={product.grooming}/>
-                    <RatingDetail className="intelligence p-6" title="intelligence" value={product.intelligence}/>
-                    <RatingDetail className="health p-6" title="health" value={product.health_issues}/>
-                    <RatingDetail className="social p-6" title="social" value={product.social_needs}/>
-                    <RatingDetail className="stranger p-6" title="stranger" value={product.stranger_friendly}/>
+                <div className='desktop:flex desktop:flex-col'>
+                    <RatingDetail isText className="temperament desktop:p-6" title="temperament" value={product.temperament}/>
+                    <RatingDetail isText className="origin desktop:p-6" title="origin" value={product.origin}/>
+                    <RatingDetail isText className="lifespan desktop:p-6" title="lifespan" value={product.life_span}/>
+                    <RatingDetail className="adaptability desktop:p-6" title="Adaptability" value={product.adaptability}/>
+                    <RatingDetail className="affection desktop:p-6" title="Affection" value={product.affection}/>
+                    <RatingDetail className="friendly desktop:p-6" title="child_friendly" value={product.child_friendly}/>
+                    <RatingDetail className="grooming desktop:p-6" title="grooming" value={product.grooming}/>
+                    <RatingDetail className="intelligence desktop:p-6" title="intelligence" value={product.intelligence}/>
+                    <RatingDetail className="health desktop:p-6" title="health" value={product.health_issues}/>
+                    <RatingDetail className="social desktop:p-6" title="social" value={product.social_needs}/>
+                    <RatingDetail className="stranger desktop:p-6" title="stranger" value={product.stranger_friendly}/>
                 </div>
             </div>
         </div>
-        <div className='mt-20 mb-20'>
+        <div className='desktop:mt-20 desktop:mb-20'>
             <h1>Other Photos</h1>
-            <div className='grid grid-cols-4 gap-8 pt-10'>
+            <div className='desktop:grid desktop:grid-cols-4 desktop:gap-8 desktop:pt-10'>
                 {
                     others.map((other) => (
                         <div>
-                            <img className="h-71 w-71 bg-cover rounded-3xl" src={other.url} alt="" />
+                            <img className="desktop:h-71 desktop:w-71 desktop:bg-cover desktop:rounded-3xl" src={other.url} alt="" />
                         </div>
                     ))
                 }
