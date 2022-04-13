@@ -30,6 +30,10 @@ module.exports = {
       colors: {
         'dark-brown': '#333333',
         'light-brown': '#DEC68B'
+      },
+      screens: {
+        'mobile': '500px',
+        'desktop': '1280px'
       }
     },
   },
